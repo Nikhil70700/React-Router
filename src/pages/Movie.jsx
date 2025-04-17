@@ -6,5 +6,5 @@ const Movie = () => {
         <h1>Movie Page</h1>
     </div>
   )
-}
+} 
 export default Movie
