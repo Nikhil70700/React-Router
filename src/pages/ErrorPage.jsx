@@ -4,8 +4,10 @@ import { useNavigate, useRouteError, isRouteErrorResponse } from 'react-router-d
 const ErrorPage = () => {
   const error = useRouteError();
   const navigate = useNavigate();
+  console.log(navigate);
 
   const handleGoBack = () => navigate(-1);
+   const handleGoBackHome=()=>navigate("/");
 
   // type‑safe check for RR v6.4+ errors
   if (isRouteErrorResponse(error) && error.status === 404) {
@@ -24,9 +26,15 @@ const ErrorPage = () => {
           </p>
           <button
             onClick={handleGoBack}
-            className="inline-block px-6 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition"
+            className="inline-block px-6 py-2 bg-red-500 text-white font-medium rounded-lg hover:bg-green-600 transition mr-1"
           >
             Go Back
+          </button>
+          <button
+            onClick={handleGoBackHome}
+            className="inline-block px-6 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-red-600 transition"
+          >
+            Home Page
           </button>
         </div>
       </section>

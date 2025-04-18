@@ -6,9 +6,16 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-gray-800 text-white px-3">
-                <nav className="container mx-auto flex items-center justify-between p-4">
-                    <div className=" text-3xl font-extrabold text-blue-400">NiksFlix</div>
+            <header className="bg-gray-800 text-white">
+                <nav className="container mx-auto flex items-center justify-between p-2 px-5">
+                    <div className=" mb-4">
+                        <img
+                            src="/images/logo.png"
+                            alt="MyApp Logo"
+                            className="h-15 w-40"
+                        />
+                    </div>
+
                     <div className="flex items-center space-x-6">
                         <ul className="flex space-x-6">
                             <li>

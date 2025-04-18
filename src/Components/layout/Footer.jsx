@@ -9,7 +9,11 @@ const Footer = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     
                         <div>
-                            <h3 className="text-white text-lg font-semibold mb-4">NiksFlix</h3>
+                            <img
+                            src="/images/logo.png"
+                            alt="MyApp Logo"
+                            className="h-15 w-40 mb-4"
+                        />
                             <p className="mb-4">Creating amazing experiences since 2010. We're dedicated to providing the best service to our customers.</p>
                             <div className="flex space-x-4">
                                 <a href="https://facebook.com" className="hover:text-white">
@@ -56,7 +60,7 @@ const Footer = () => {
                                 </li>
                                 <li className="flex items-center">
                                     {/* <Mail size={16} className="mr-2" /> */}
-                                    <span>contact@company.com</span>
+                                    <span>contact@niksflix.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +69,7 @@ const Footer = () => {
                 <div className="bg-gray-900 py-4">
                     <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                         <div className="text-sm mb-2 md:mb-0">
-                            &copy; {new Date().getFullYear()} Company Name. All rights reserved.
+                            &copy; {new Date().getFullYear()} niksflix. All rights reserved.
                         </div>
                         <div className="flex space-x-4 text-sm">
                             <NavLink to="/privacy-policy" className="hover:text-white">Privacy Policy</NavLink>
