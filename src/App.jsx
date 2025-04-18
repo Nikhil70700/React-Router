@@ -5,12 +5,14 @@ import Movie from './pages/Movie';
 import About from './pages/About';
 import Home from './pages/Home';
 import AppLayout from './Components/layout/AppLayout';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
 const router=createBrowserRouter([
   {
     path:"/",
     element:<AppLayout/>,
+    errorElement:<ErrorPage/>,
     children:[
         {
           path:"/",
@@ -28,7 +30,7 @@ const router=createBrowserRouter([
           path:"/contact",
           element:<Contact/>,
         },
-      
+        
     ]
   },
   
