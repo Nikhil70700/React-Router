@@ -4,9 +4,10 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import Home from './pages/Home';
 import {Movie} from './pages/Movie';
-import AppLayout from './Components/layout/AppLayout';
+
 import ErrorPage from './pages/ErrorPage';
 import { getMoviesData } from './api/GetAPIData';
+import { AppLayout } from './Components/layout/AppLayout';
 
 function App() {
 const router=createBrowserRouter([

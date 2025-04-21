@@ -1,55 +1,85 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
+  const getNavLinkStyle = ({ isActive }) => {
+    return {
+      color: isActive ? "blue" : "red",
+    };
+  };
 
+  return (
+    <>
+      <header className="section-navbar">
+        {/* <section className="top_txt">
+          <div className="head container">
+            <div className="head_txt">
+              <p>Watch movies 🎥 and shows you love, all in one place 🎬.</p>
+            </div>
+            <div className="sing_in_up">
+              <NavLink to="# ">SIGN IN</NavLink>
+              <NavLink to="# ">SIGN UP</NavLink>
+            </div>
+          </div>
+        </section> */}
 
-    return (
-        <>
-            <header className="bg-gray-800 text-white">
-                <nav className="container mx-auto flex items-center justify-between p-2 px-5">
-                    <div className=" mb-4">
-                        <img
-                            src="/images/logo.png"
-                            alt="MyApp Logo"
-                            className="h-15 w-40"
-                        />
-                    </div>
+        <div className="container">
+          <div className="navbar-brand">
+            <NavLink to="index">
+              <img src="/images/logo.png" alt="" />
+            </NavLink>
+          </div>
 
-                    <div className="flex items-center space-x-6">
-                        <ul className="flex space-x-6">
-                            <li>
-                                <NavLink to="/" className={({ isActive }) => isActive ? "text-green-400" : "hover:text-blue-300"}>Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/about" className={({ isActive }) => isActive ? "text-green-400" : "hover:text-blue-300"}>About</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/movie" className={({ isActive }) => isActive ? "text-green-400" : "hover:text-blue-300"}>Movie</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contact" className={({ isActive }) => isActive ? "text-green-400" : "hover:text-blue-300"}>Contact</NavLink>
-                            </li>
-                        </ul>
-                        <div className="flex space-x-4">
-                            <NavLink
-                                to="/signin"
-                                className="px-4 py-2 border border-white rounded hover:bg-white hover:text-gray-800"
-                            >
-                                Sign In
-                            </NavLink>
-                            <NavLink
-                                to="/signup"
-                                className="px-4 py-2 bg-green-500 rounded hover:bg-green-600 text-white"
-                            >
-                                Sign Up
-                            </NavLink>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </>
-    )
-}
-
-export default Header
+          <nav className="navbar">
+            <ul>
+              <li className="nav-item">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/about"
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "blue" : "black",
+                    };
+                  }}
+                >
+                  about
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="movie"
+                  className="nav-link"
+                  style={getNavLinkStyle}
+                >
+                  movies
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="contact"
+                  className={({ isActive }) =>
+                    isActive ? "nav-link active" : "nav-link"
+                  }
+                >
+                  contact
+                </NavLink>
+              </li>
+              <div className="sing_in_up">
+              <NavLink className="sign-in" to="# ">Sign in</NavLink>
+              <NavLink className="sign-up"  to="# ">Sign Up</NavLink>
+            </div>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
+  );
+};
