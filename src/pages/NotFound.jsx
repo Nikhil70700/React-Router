@@ -1,4 +1,5 @@
 import { NavLink, useRouteError } from "react-router-dom";
+import '../styles/styles.css'
 
 export const NotFound = () => {
   const error = useRouteError();

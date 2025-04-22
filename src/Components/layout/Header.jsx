@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom";
 export const Header = () => {
   const getNavLinkStyle = ({ isActive }) => {
     return {
-      color: isActive ? "blue" : "red",
+      color: isActive ? "green" : "black",
     };
   };
 
   return (
     <>
       <header className="section-navbar">
-        {/* <section className="top_txt">
+        <section className="top_txt">
           <div className="head container">
             <div className="head_txt">
               <p>Watch movies 🎥 and shows you love, all in one place 🎬.</p>
@@ -20,7 +20,7 @@ export const Header = () => {
               <NavLink to="# ">SIGN UP</NavLink>
             </div>
           </div>
-        </section> */}
+        </section>
 
         <div className="container">
           <div className="navbar-brand">
@@ -72,10 +72,6 @@ export const Header = () => {
                   contact
                 </NavLink>
               </li>
-              <div className="sing_in_up">
-              <NavLink className="sign-in" to="# ">Sign in</NavLink>
-              <NavLink className="sign-up"  to="# ">Sign Up</NavLink>
-            </div>
             </ul>
           </nav>
         </div>
