@@ -1,41 +1,23 @@
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-  const getNavLinkStyle = ({ isActive }) => {
-    return {
-      color: isActive ? "green" : "black",
-    };
-  };
-
   return (
     <>
       <header className="section-navbar">
-        <section className="top_txt">
-          <div className="head container">
-            <div className="head_txt">
-              <p>Watch movies 🎥 and shows you love, all in one place 🎬.</p>
-            </div>
-            <div className="sing_in_up">
-              <NavLink to="# ">SIGN IN</NavLink>
-              <NavLink to="# ">SIGN UP</NavLink>
-            </div>
-          </div>
-        </section>
-
         <div className="container">
           <div className="navbar-brand">
-            <NavLink to="index">
-              <img src="/images/logo.png" alt="" />
+            <NavLink to="/">
+              <img src="/images/logo.png" alt="Logo" />
             </NavLink>
           </div>
 
-          <nav className="navbar">
+          <nav className="navbar hidden md:flex">
             <ul>
               <li className="nav-item">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
+                    isActive ? "active" : ""
                   }
                 >
                   Home
@@ -44,35 +26,39 @@ export const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="/about"
-                  style={({ isActive }) => {
-                    return {
-                      color: isActive ? "blue" : "black",
-                    };
-                  }}
-                >
-                  about
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="movie"
-                  className="nav-link"
-                  style={getNavLinkStyle}
-                >
-                  movies
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="contact"
                   className={({ isActive }) =>
-                    isActive ? "nav-link active" : "nav-link"
+                    isActive ? "active" : ""
                   }
                 >
-                  contact
+                  About
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/movie"
+                  className={({ isActive }) =>
+                    isActive ? "active" : ""
+                  }
+                >
+                  Movies
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "active" : ""
+                  }
+                >
+                  Contact
                 </NavLink>
               </li>
             </ul>
+            
+            <div className="auth-buttons">
+              <button className="auth-button signin-button">Sign In</button>
+              <button className="auth-button signup-button">Sign Up</button>
+            </div>
           </nav>
         </div>
       </header>
