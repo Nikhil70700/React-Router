@@ -38,7 +38,7 @@ const Footer = () => {
               arrivals, sales & promos!
             </p>
             <div className="f-mail">
-              <input type="email" placeholder="Your Email" />
+              <input type="email" placeholder="nikhilpandya829@gmail.com" />
               <i className="bx bx-envelope"></i>
             </div>
             <hr />
