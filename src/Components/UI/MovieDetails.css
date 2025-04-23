@@ -14,7 +14,7 @@
 .main-container {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 25px;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    /* box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px; */
     max-width: 1200px;
     width: 90%;
     display: grid;
@@ -25,7 +25,9 @@
     margin: 20px;
     opacity: 0;
     animation: scaleIn 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
-    
+    -webkit-animation: scaleIn 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+    border: 0px solid #303030;
+    box-shadow: 0px 0px 55px #303030,0px 0px 55px #303030 inset;
 }
 
 .poster-container{
@@ -91,7 +93,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border-left: 5px solid pink;
+    /* border-left: 5px solid pink; */
 }
 
 .ticket_movie-title {
@@ -141,7 +143,7 @@
     padding: 1rem;
     background: rgba(0, 0, 0, 0.03);
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .meta-icon {
@@ -157,9 +159,12 @@
 
 .meta-text strong {
     display: block;
-    color: #333;
+    color: red;
     font-weight: 600;
     margin-bottom: 0.3rem;
+}
+.meta-text p{
+    color: #1d81eb;
 }
 
 .ticket_buy-btn {

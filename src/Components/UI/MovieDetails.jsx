@@ -22,6 +22,12 @@ export const MovieDetails = () => {
     Awards
   } = movieData;
 
+  const totalMinutes=Runtime.replace("min","");
+  const hours=Math.floor(totalMinutes / 60)
+  const minutes=totalMinutes%60;
+  console.log(hours,minutes);
+  const formattedTime=`${hours}hrs ${minutes}min`
+
   return (
     <li className="hero-container hero-movie-container">
       <div className="main-container">
@@ -54,7 +60,7 @@ export const MovieDetails = () => {
                 <div className="meta-icon">⏳</div>
                 <div className="meta-text">
                   <strong>Runtime</strong>
-                  <p>{Runtime}</p>
+                  <p>{formattedTime}</p>
                 </div>
               </div>
 
