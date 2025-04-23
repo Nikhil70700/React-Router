@@ -5,27 +5,20 @@ export const Card = ({ curMovie }) => {
   const { Poster, imdbID, Title, Type, Year } = curMovie;
 
   return (
-    <li className="hero-container">
-      <div className="main-container">
-        {/* Poster */}
-        <div className="poster-container">
-          <img src={Poster} className="poster" alt={Title} />
+    <li className="hero-containers">
+      <div className="main-containers">
+        <div className="poster-containers">
+          <img src={Poster} className="posters" alt={Title} />
         </div>
-
-        {/* Title - now always visible */}
-        <h2 className="movie-title">{Title}</h2>
-
-        {/* Type & Year */}
-        <div className="poster-child">
+        <h2 className="movie-titles">{Title}</h2>
+        <div className="poster-childs">
           <p>{Type}</p>
           <p>{Year}</p>
         </div>
-
-        {/* Watch Now Button */}
-        <div className="ticket-container">
-          <div className="ticket__content">
+        <div className="ticket-containers">
+          <div className="ticket__contents">
             <NavLink to={`/movie/${imdbID}`}>
-              <button className="ticket__buy-btn">Watch now</button>
+              <button className="ticket__buy-btns">Watch now</button>
             </NavLink>
           </div>
         </div>

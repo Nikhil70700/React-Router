@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className="f-design">
           <div className="f-design-txt">
-            <p>Design and Code by Thapa Technical</p>
+            <p>Design and Code by Nikhil Pandey</p>
           </div>
         </div>
       </footer>

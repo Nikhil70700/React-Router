@@ -1,4 +1,3 @@
-import '../../styles/styles.css'
 export const Loading = () => {
     return (
       <div className="container loader-section">
