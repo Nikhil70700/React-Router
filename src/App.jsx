@@ -11,6 +11,8 @@ import { AppLayout } from './Components/layout/AppLayout';
 import { MovieDetails } from './Components/UI/MovieDetails';
 import getMovieDetails from './api/GetMovieDetails';
 import Contact, { contactData } from './pages/Contact';
+import SignIn from './Components/layout/SignIn';
+import SignUp from './Components/layout/SignUp';
 
 function App() {
 const router=createBrowserRouter([
@@ -31,6 +33,15 @@ const router=createBrowserRouter([
           path:"/movie",
           element:<Movie/>,
           loader:getMoviesData,
+        },
+        {
+          path:"/signin",
+          element:<SignIn/>
+
+        },
+        {
+          path:"/signUp",
+          element:<SignUp/>
         },
 // Dynamic routing to get more about particular card
 
