@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
 export const Header = () => {
@@ -78,7 +78,7 @@ export const Header = () => {
           </nav>
           <div className="ham-menu">
             <button onClick={handleButtonToggle}>
-            <GiHamburgerMenu />
+            <RxHamburgerMenu />
             </button>
 
           </div>
