@@ -255,7 +255,14 @@
   display: inline-block;
   justify-content: flex-end;
   text-align: end;
- }
+  padding-inline:5px;
+  background-color: #4c4c4ca4;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 .menu-mobile{
   position: absolute;
   top: 10rem;
@@ -326,7 +333,7 @@ ul li a:after {
 
 .auth-buttons {
   display: flex;
-  gap: 1.6rem;
+  gap: 3.6rem;
   margin-left: 3.2rem;
   padding-bottom: 5px;
 }
@@ -388,7 +395,7 @@ ul li a:after {
   button{
     font-size: 4rem;
     font-weight: 700;
-    color:#2563EB;
+    color:#333;
   }
   
   .auth-buttons {
@@ -1009,7 +1016,7 @@ ul li a:after {
     } 
 
     .section-hero .hero-heading {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
     }
     
     .section-products #productContainer {
@@ -1252,17 +1259,19 @@ ul li a:after {
 
 
 .Card {
-  background-color: #1e1e1e; /* Dark card background */
+  background-color: #fff; /* Dark card background */
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   text-align: center;
   width: 350px;
+  margin-top: 5rem;
 }
 
 /* Form styling */
 h1 {
-  color: #ffffff;
+  color: #333;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -1282,7 +1291,8 @@ input {
   border: 1px solid #444;
   border-radius: 5px;
   font-size: 16px;
-  background-color: #333;
+  background-color: #fff;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
   color: #fff;
 }
 
@@ -1303,3 +1313,9 @@ input {
 .btn-sign-in:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
+
